@@ -1,0 +1,27 @@
+Exercise 3: Using Wireshark to understand basic HTTP request/response messages
+1. The status code and phrase is "200 OK"
+2. The HTML file was last modified on "Tue, 23 Sep 2003 5:29:00 GMT." It also has a DATE
+header which says "Tue, 23 Sep 2003 5:29:50 GMT" and these fields are different by 50 seconds.
+3. The connection established is persistent as the http connection contains a header called
+"Keep-Alive" that has a timeout of 10 and max of 100. This maintains the connection between
+the client and the server and reduces the amount of time needed to serve files between servers.
+4. There are 73 bytes of data as seen in the "File Data" header.
+5. The data contained inside the HTTP packet response is 3 lines of html code printing
+"\n
+Congratulations. You've downloaded the file lab2-1.html!\n
+\n"
+
+Exercise 4: Using Wireshark to understand the HTTP CONDITIONAL GET/response interaction
+1. No, there is no "IF-MODIFIED-SINCE" line in the HTTP GET
+2. Yes, the file was last modified on Tue, 23 Sep 2003 05:35:00 GMT
+3. Yes. They exist as:
+"If-Modified-Since: Tue, 23 Sep 2003 05:35:00 GMT" and 
+"If-None-Match: "1bfef-173-8f4ae900""
+4. The status code returned to the second HTTP GET was 304 with the description of 
+"Not Modified." The server did not return the contents of the file as the file had
+not been modified.
+5. The value of the Etag in the 2nd response is ETag: "1bfef-173-8f4ae900". This is used
+to compare the specific versions of a resource and as the file has not been modified, 
+the Etag remains the same as in the 1st response.
+
+Exercise 5: Ping Client

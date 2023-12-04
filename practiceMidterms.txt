@@ -1,0 +1,19 @@
+Section 1:
+
+3. TTL tells us how long it needs before the data in the packet needs to be discarded. d
+4. False
+5. D. 
+
+Section 2: 
+
+2. When a single change is made in the original 3 bit byte, that means that the 1's complement will change as well. 
+3. 
+a. Human readable and easier to debug than binary. But wasteful
+b. web cache requires you to have your own proxy server which is less convenient than having a CDN server that is already set up. Also
+    web cache has something to do with a static html web page while CDN has dynamic web page. static displays the same data for all users
+    while dynamic displays different information for different users.
+
+4. Since r7-10 take less than 2 minutes (10 seconds), they will be gone after the 2 minutes and the r1-6 will be stored in the local
+    dns server.
+
+

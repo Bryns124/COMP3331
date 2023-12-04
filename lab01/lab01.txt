@@ -1,0 +1,39 @@
+Exercise 1: nslookup
+Use the nslookup command from the "Tools of the Trade" and answer the following questions:
+
+1. The IP address of www.koala.com.au is both 172.67.219.46 and 104.21.45.210. The reason for having several IP addresses as an output is that
+is supports load balancing in that, rather than having just one IP address to send all the traffic to, having two or more IP addresses splits
+up this amount of traffic and prevents the server from overloading.
+
+2. 127.0.0.1 is called the 'localhost' or 'loopback' address. The address is used to establish an IP connection to the same machine or computer 
+being used by the end-user.
+
+Exercise 2: Use ping to test host reachability
+Reachable:
+www.unsw.edu.au
+www.mit.edu
+www.intel.com.au
+www.tpg.com.au
+www.amazon.com
+www.tsinghua.edu.cn
+8.8.8.8
+Unreachable:
+www.getfittest.com.au - the given hostname could not be identified, which likely means that the hostname does not exist.
+www.hola.hp - the given hostname could not be identified, which likely means that the hostname does not exist.
+www.kremlin.ru - the given hostname exists however, it is unreachable possibly due to security or ping time reasons.
+
+Exercise 3: Use traceroute to understand the network topology
+Note: Include all traceroute outputs in your report.
+
+1. There are 24 routers between my workstation and www.columbia.edu. There are 3 routers along the path that are a part of UNSW.
+Packets likely cross the Pacific Ocean between 113.197.14.137 and 138.44.228.5 as the largest jump time occurs between those two
+IP locations.
+2. The router that the paths diverge from is 113.197.15.147. The number of hops is not necessarily proportional to the physical distance as 
+there could be a higher number of routers in a smaller physical area and vice versa.
+3. The IP location for www.speedtest.com.sg is 202.150.221.169 and the IP location for www.steadfast.net is 208.100.4.50. The reverse path 
+does not seem to go through the same routers as the forward path and this may be because of the variable paths the traceroute is able to take.
+
+Exercise 4: Use ping to gain insights into network performance
+1. 
+2. The delay varies over time.
+3. Transmission and queueing delay are affected by the size of the packet, while propogation and processing is not. 
